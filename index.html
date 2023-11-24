@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #inputfield {
+            display: none;
+        }
+
+        #inputfield.open {
+            display: block;
+        }
+
+        .svg-size {
+            width: 30px; height: 30px; transform: translate3d(0px, 0px, 0px);
+        }
+        #searchIcon {
+            width: 30px;
+        }
+        .search-form-container {
+            display: grid;
+            grid-template-columns: 40px 170px;
+        }
+        .input-search {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-form-container">
+         <div id="searchIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px" preserveAspectRatio="xMidYMid meet" 
+                class="svg-size" > <!-- svg-size - размер картинки -->
+                <defs>
+                    <clipPath id="__lottie_element_2">
+                        <rect width="50" height="50" x="0" y="0"></rect>
+                    </clipPath>
+                </defs>
+                <g clip-path="url(#__lottie_element_2)">
+                    <g transform="matrix(0.9999590516090393,0.009052717126905918,-0.009052717126905918,0.9999590516090393,0.2742042541503906,-0.24634552001953125)" opacity="1" style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,21,20)">
+                            <path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="2" d=" M0,-16 C-8.836000442504883,-16 -16,-8.836000442504883 -16,0 C-16,8.836999893188477 -8.836000442504883,16 0,16 C8.836999893188477,16 16,8.836999893188477 16,0 C16,-8.836000442504883 8.836999893188477,-16 0,-16z">
+                            </path>
+                        </g>
+                        <g opacity="1" transform="matrix(1,0,0,1,38.86399841308594,38.86399841308594)">
+                            <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="4" d=" M-6.635000228881836,-6.635000228881836 C-6.635000228881836,-6.635000228881836 6.635000228881836,6.635000228881836 6.635000228881836,6.635000228881836">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <form action="#">
+            <input type="search" id="inputfield" class="input-search" placeholder="Search">
+        </form>
+    </div>
+   
+
+    <script>
+        const searchIcon = document.querySelector('#searchIcon');
+        const input = document.querySelector('#inputfield');
+
+        searchIcon.addEventListener('click', () => {
+            input.classList.toggle('open')
+        });
+    </script>
+</body>
+</html>
